@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="header">
+    <h1>EASY BIT</h1>
+    <div class="user-controls">
+        <span>USER_ID</span>
+        <span>현재 시각</span>
+        <a href="#">Logout</a>
+    </div>
+</div>
+<div class="nav">
+    <a href="#">매매 Bot</a>
+    <a href="#">Information</a>
+    <a href="#">Q&A</a>
+</div>
+<div class="main">
+    <div class="bot-controls">
+        <h2>매매 Trading Bot</h2>
+        <div class="mode-switch">
+            <button id="ai-mode-btn">AI 모드</button>
+            <button id="volatility-mode-btn">변동성 돌파 모드</button>
+        </div>
+        <div class="settings" id="ai-mode-settings" style="display: none;">
+            <label for="percentage">%</label>
+            <input type="number" id="percentage" name="percentage" oninput="updatePercentage()">
+            <div id="percentage-display">0%</div>
+            <button>Auto</button>
+        </div>
+    </div>
+</div>
+{% endblock %}
